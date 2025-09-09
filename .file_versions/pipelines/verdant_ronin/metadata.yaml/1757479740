@@ -1,0 +1,25 @@
+blocks: []
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-09-09 21:47:04.368706+00:00'
+data_integration: null
+description: test
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: verdant ronin
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: verdant_ronin
+variables_dir: /home/sg/.mage_data/my-mage
+widgets: []
