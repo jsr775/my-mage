@@ -1,0 +1,3 @@
+[submodule "ttt"]
+	path = ttt
+	url = ssh://git@gitlab.ttt.lnw.com:2224/ttt/platform/python-platform.git
