@@ -4,7 +4,6 @@ Block for loading data from Jira.
 
 # pylint: disable=possibly-used-before-assignment
 # pylint: disable=unused-argument
-import pprint
 import re
 from ttt.jira import JiraClient
 
@@ -79,7 +78,3 @@ def test_output(output, *args) -> None:
     Template code for testing the output of the block.
     """
     assert output is not None, "The output is undefined"
-
-
-if __name__ == "__main__":
-    data = load_data()
