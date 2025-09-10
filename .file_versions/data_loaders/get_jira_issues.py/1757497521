@@ -44,9 +44,8 @@ def load_data(*args, **kwargs):
             "Story Points",
             "priority",
             "Sprint",
-            "description",
         ],
-        limit=300,
+        limit=10,
     )
 
     # Extract 'name' field from dictionary columns
@@ -64,8 +63,6 @@ def load_data(*args, **kwargs):
         "RDhinge": "Raj",
         "nikhil.deore": "Nikhil",
         "jose.solorio": "Jose",
-        "cris.serrano": "Cris",
-        "lashaun.johnson": "Lashaun",
     }
 
     df["Developer"] = df["Developer"].map(developer_mapping).fillna(df["Developer"])

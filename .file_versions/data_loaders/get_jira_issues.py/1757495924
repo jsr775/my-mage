@@ -1,0 +1,44 @@
+"""
+Block for loading data from Jira.
+"""
+
+# pylint: disable=possibly-used-before-assignment
+# pylint: disable=unused-argument
+import pprint
+from ttt.jira import JiraClient
+
+if "data_loader" not in globals():
+    from mage_ai.data_preparation.decorators import data_loader
+if "test" not in globals():
+    from mage_ai.data_preparation.decorators import test
+
+
+@data_loader
+def load_data(*args, **kwargs):
+    """
+    Template code for loading data from any source.
+
+    Returns:
+        Anything (e.g. data frame, dictionary, array, int, str, etc.)
+    """
+    jira_client = JiraClient()
+
+    result = jira_client.get_issues(
+        jql="project = TTTD and Sprint in openSprints() and status = Review",
+        fields=["summary", "status", "assignee"],
+        limit=10,
+    )
+    return result
+
+
+@test
+def test_output(output, *args) -> None:
+    """
+    Template code for testing the output of the block.
+    """
+    assert output is not None, "The output is undefined"
+
+
+if __name__ == "__main__":
+    data = load_data()
+    pprint.pprint(data)

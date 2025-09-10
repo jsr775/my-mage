@@ -1,5 +1,5 @@
 project_uuid: 444a8096bfad4495b764f73200fd3f6b
 features:
-  add_new_block_v2: true
+  add_new_block_v2: false
 help_improve_mage:
 pipelines:
