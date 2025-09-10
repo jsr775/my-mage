@@ -65,6 +65,7 @@ def load_data(*args, **kwargs):
         "jose.solorio": "Jose",
         "cris.serrano": "Cris",
         "lashaun.johnson": "Lashaun",
+        "darrel.belen": "Darrel",
     }
 
     df["Developer"] = df["Developer"].map(developer_mapping).fillna(df["Developer"])
